@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jackets</title>
+    <style>
+        /* Reset CSS */
+        body {
+            background-color: #f8f9fa; /* Light Gray */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Banner Styles */
+        .banner {
+            background-color: #343a40; /* Dark Gray */
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Menu Styles */
+        .menu {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin-right: 20px;
+            position: relative;
+        }
+
+        .menu a {
+            color: #007bff; /* Blue */
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .menu a:hover {
+            text-decoration: underline;
+        }
+
+        /* Tooltip Styles */
+        .tooltip {
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #212529; /* Dark Gray */
+            color: #ffffff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s, visibility 0s linear 0.3s;
+        }
+
+        .menu li:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s;
+        }
+
+        /* Paragraph Styles */
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #495057; /* Dark Gray */
+        }
+
+        /* Button Container Styles */
+        .button-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* Button Styles */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff; /* Blue */
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3; /* Darker Blue */
+        }
+
+
+
+        #affiliateButton {
+            background-color: #ff4500; /* Affiliate color */
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 5 columns */
+            gap: 10px; /* gap between items */
+            justify-items: center; /* center items horizontally */
+        }
+
+        .grid-item {
+            text-align: center;
+            width: 100%; /* Ensures each item takes the full width of its grid cell */
+        }
+
+        .grid-item img {
+            width: 100%; /* Ensures the image fills its container */
+            height: 200px; /* Set a fixed height for all images */
+            object-fit: cover; /* Maintain aspect ratio while covering the area */
+            transition: transform 0.3s ease; /* smooth transition for zoom effect */
+        }
+
+        .grid-item img:hover {
+            transform: scale(1.1); /* zoom in effect on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <a href="https://pandabuy.allapp.link/co444r9rogtreqrjiqa0">Click Link To Get 5% Discount</a>
+    </div>
+
+    <!-- Menu -->
+    <div class="menu">
+        <ul>
+            <li><a href="{% url 'core:main' %}" style="color: #dc3545;">Home</a><span class="tooltip">Return to the homepage</span></li>
+            <li><a href="{% url 'core:short_sleeves' %}" style="color: #ffc107;">Short Sleeves</a><span class="tooltip">Short Sleeves</span></li>
+            <li><a href="{% url 'core:long_sleeves' %}" style="color: #28a745;">Long Sleeves</a><span class="tooltip">Long Sleeves</span></li>
+            <li><a href="{% url 'core:pants' %}" style="color: #007bff;">Pants</a><span class="tooltip">Pants</span></li>
+            <li><a href="{% url 'core:shorts' %}" style="color: #6610f2;">Shorts</a><span class="tooltip">Shorts</span></li>
+            <li><a href="{% url 'core:shoes' %}" style="color: #007bff;">Shoes</a><span class="tooltip">Shoes</span></li>
+            <li><a href="{% url 'core:accessories' %}" style="color: #6c757d;">Accessories</a><span class="tooltip">Accessories</span></li>
+            <li><a href="{% url 'core:sweaters' %}" style="color: #007bff;">Sweaters</a><span class="tooltip">Sweaters</span></li>
+            <li><a href="{% url 'core:jackets' %}" style="color: #17a2b8;">Jackets</a><span class="tooltip">Jackets</span></li>
+            <li><a href="{% url 'core:tracksuits' %}" style="color: #ffc107;">Tracksuits</a><span class="tooltip">Tracksuits</span></li>
+            <li><a href="{% url 'core:budget' %}" style="color: #007bff;">Budget</a><span class="tooltip">Budget</span></li>
+            <li><a href="{% url 'core:watches' %}" style="color: #e83e8c;">Watches</a><span class="tooltip">Watches</span></li>
+            <li><a href="{% url 'core:tech' %}" style="color: #007bff;">Tech</a><span class="tooltip">Tech</span></li>
+        </ul>
+    </div>
+
+
+    <!-- Grid Container -->
+    <div class="grid-container">
+        {% load static %}
+        {% for product in product_data %}
+        <div class="grid-item">
+            <a href="{{ product.url }}">
+                <img src="{% static product.image %}" alt="{{ product.name }}">
+            </a>
+            <p><a href="{{ product.url }}">{{ product.name }}</a></p>
+        </div>
+        {% endfor %}
+
+
+    
+</body>
+</html>
