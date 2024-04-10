@@ -24,12 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-xa2co3#7#a^mvql$yxdszyu$z@jhd+e7w9h!d7c0z%xz&v#n43'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["pandabuylinks-aabbyy.pythonanywhere.com"]
+ALLOWED_HOSTS = []
 
 
-# Application definition
+# "pandabuylinks-aabbyy.pythonanywhere.com"
 
 INSTALLED_APPS = [
     'core',
@@ -139,3 +139,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#ss

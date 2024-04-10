@@ -6,6 +6,7 @@ from . import views
 app_name = 'core'
 
 urlpatterns = [
+    
     path('', views.main, name='main'),
     path('short-sleeves/', views.short_sleeves, name='short_sleeves'),
     path('long-sleeves/', views.long_sleeves, name='long_sleeves'),
