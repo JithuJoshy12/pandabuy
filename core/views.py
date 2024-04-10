@@ -84,11 +84,11 @@ def short_sleeves(request):
         {"name": "Carti WLR Hell Merch White ", "image": "short_sleeves_images/image64.avif", "url": "https://pandabuy.allapp.link/co5f850gpf6pm1sjct7g"},
         {"name": "Saint Michael Virgin Mary Tee", "image": "short_sleeves_images/image65.avif", "url": "https://pandabuy.allapp.link/co5f8bhrogtuqkqe6270"},
 
-        {"name": "Female Pink Crop Shirt ", "image": "short_sleeves_images/image66.avif", "url": "https://weidian.info/3gqp7"},   
-        {"name": "Colorful Designed Tee ","image": "short_sleeves_images/image67.jpg", "url": "https://weidian.info/xwmyc"},
-        {"name":"Ghostly Graphic Tee", "image": "short_sleeves_images/image68.avif", "url": "https://weidian.info/xakm8"},
-        {"name": "Courage Graphic Tee ", "image": "short_sleeves_images/image69.avif", "url": "https://weidian.info/r8prh"},
-        {"name": "2442 Angelic Tee", "image": "short_sleeves_images/image70.avif", "url": "https://weidian.info/v6yj3"},
+        {"name": "Female Pink Crop Shirt ", "image": "short_sleeves_images/image66.avif", "url": "https://pandabuy.allapp.link/cobemh1rogtuqkqhdl60"},   
+        {"name": "Colorful Designed Tee ","image": "short_sleeves_images/image67.jpg", "url": "https://pandabuy.allapp.link/cobemjggpf6pm1smkocg"},
+        {"name":"Ghostly Graphic Tee", "image": "short_sleeves_images/image68.avif", "url": "https://pandabuy.allapp.link/cobemnh0b4mo6u3lih70"},
+        {"name": "Courage Graphic Tee ", "image": "short_sleeves_images/image69.avif", "url": "https://pandabuy.allapp.link/cobep8ggpf6pm1smkq7g"},
+        {"name": "2442 Angelic Tee", "image": "short_sleeves_images/image70.avif", "url": "https://pandabuy.allapp.link/cobemqp0b4mo6u3lihag"},
         
 
         
