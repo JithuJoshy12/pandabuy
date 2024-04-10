@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-xa2co3#7#a^mvql$yxdszyu$z@jhd+e7w9h!d7c0z%xz&v#n43'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pandabuylinks-aabbyy.pythonanywhere.com']
 
 
 # "pandabuylinks-aabbyy.pythonanywhere.com"
